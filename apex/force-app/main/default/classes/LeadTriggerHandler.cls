@@ -1,10 +1,16 @@
+/**
+*Description:created class to handle lead trigger 
+created By:Bhaarat Shastri
+created Date:5-Jan-23
+*/
 public with sharing class LeadTriggerHandler {
     
+    // A method to check lead status
     public static void leadStatus(List<Lead> leadList) {
         for (Lead lea : leadList) {
-            if(lea.Status.equals('Working - Contacted')){
+            if(lea.Status.equals('Working - Contacted')){//checking lead status
                 lea.adderror('This lead can not be deleted, kindly contact the administrator');
-            }
-        }
-    }
-}
+            }//end if
+        }//end for
+    }// end method
+}// End class
